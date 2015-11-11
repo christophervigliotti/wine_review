@@ -17,6 +17,12 @@ First Do Some Reading
 
     status: done
 
+Review Bookstore Code
+
+    missing some of it...PHOOEY!
+    re-code it, test it, add it, commit it, push it
+    (then sling code for wine_review)
+
 Then Sling Some Code
 
   Requirements To Implement
