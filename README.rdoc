@@ -1,28 +1,30 @@
-== README
+You will need to generate a Wine model with the following fields
+name: string
+year: integer
+winery: string
+country: string
+varietal: string
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Generate a WinesController
+It must have index and show actions
+The actions must retrieve Wine objects from the database
 
-Things you may want to cover:
+The index page
+must list all the wines in the database
+must show the name, winery, and varietal for each wine
+must have a link to the show page for each wine
 
-* Ruby version
+The show page
+must show all fields from the Wine model
+must provide a link back to the index page
 
-* System dependencies
+seeds.rb
+create at least 6 wines in the seeds.rb (so that when we add paging later, you'll have two pages of wines)
 
-* Configuration
+routes.rb
+you should name your routes "wines" and "wine" using the as: option
 
-* Database creation
+and when I am done...
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+git tag class-02
+git push --tags
