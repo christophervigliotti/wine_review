@@ -1,0 +1,24 @@
+<h1>Wine#index</h1>
+must list all the wines in the database
+must show the name, winery, and varietal for each wine
+must have a link to the show page for each wine
+<p>Find me in app/views/wine/index.html.erb</p>
+
+
+<h1>Wines</h1>
+<ol>
+  <% @wines.each do |book| %>
+      <h2><%= wine.name %></h2>
+      <ul>
+        <li>
+          <%= wine.winery %>
+        </li>
+        <li>
+          <%= wine.varietal %>
+        </li>
+        <li>
+          Smell The Cork
+        </li>
+      </ul>
+  <% end %>
+</ol>
