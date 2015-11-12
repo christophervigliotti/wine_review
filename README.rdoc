@@ -23,7 +23,9 @@ Review Bookstore Code
     re-code it, test it, add it, commit it, push it
     (then sling code for wine_review)
 
-Then Sling Some Code
+    status: done
+
+Sling Some Code
 
   Requirements To Implement
 
@@ -39,7 +41,7 @@ Then Sling Some Code
 
         bin/rails generate model wine name:string year:integer winery:string country:string varietal:string
 
-      status: code-ahead done, implemented, stuff generated
+      status: done
 
     Generate a WinesController
 
@@ -57,7 +59,7 @@ Then Sling Some Code
           @book = Book.find(params[:id])
         end
 
-      status: code-ahead done, implemented, stuff generated
+      status: done
 
     The index page
 
@@ -65,28 +67,30 @@ Then Sling Some Code
       must show the name, winery, and varietal for each wine
       must have a link to the show page for each wine
 
-      status: started, refer to class 2 labs and preso, and book ch 3
+      status: done
 
     The show page
 
       must show all fields from the Wine model
       must provide a link back to the index page
 
-      status: started, refer to class 2 labs and preso, and book ch 3
+      status: done
 
     seeds.rb
 
       create at least 6 wines in the seeds.rb (so that when we add paging later, you'll have two pages of wines)
 
-        status: not started
+        status: done
 
     routes.rb
 
       you should name your routes "wines" and "wine" using the as: option
 
-      status: not started
+      status: done
 
 Lastly Tag & Push Yer Code
 
   git tag class-02
   git push --tags
+
+  status: not started
