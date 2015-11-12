@@ -1,10 +1,10 @@
-<h1>Quit Yer' Whinin'</h1>
+<h1><%= image_tag "bottle.small.png", :align=> "left" %> Quit Yer' Whinin'</h1>
 <h2>Wines</h2>
-<ol>
+
+<ul>
   <% @wines.each do |wine| %>
-    <p>
-      <h2><%= wine.name %></h2>
-      <%= wine.name %> is a <%= wine.varietal.downcase %> produced by <%= wine.winery %>.  For more info, <%= link_to('smell the cork', wine) %>.
-    </p>
+      <li>
+        <strong><%= wine.name %></strong> is a <%= wine.varietal.downcase %> produced by <%= wine.winery %>.  For more info, <%= link_to('smell the cork', wine) %>.
+      </li>
   <% end %>
-</ol>
+</ul>

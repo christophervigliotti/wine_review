@@ -1,9 +1,8 @@
-<h1>Quit Yer' Whinin'</h1>
-<h2><%= link_to 'Wines', wines_path %> -  Wine Details</h2>
+<h1><%= image_tag "bottle.small.png", :align=> "left" %> Quit Yer' Whinin'</h1>
+<h2><%= link_to 'Wines', wines_path %> -  <%= @wine.name %></h2>
 
 <article class="wine">
   <header>
-    <h2><%= @wine.name %></h2>
     <p><label>Name:</label> <%= @wine.name %></p>
     <p><label>Year:</label> <%= @wine.year %></p>
     <p><label>Winery:</label> <%= @wine.winery %></p>
