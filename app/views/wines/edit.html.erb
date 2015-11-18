@@ -1,6 +1,3 @@
-<!--
-The new and edit pages
-must have fields to edit name, year, winery, country, and varietal
-must have save button and a cancel link
-must use a partial to reduce duplication of the form code
--->
+<%= render '/title' %>
+<h2><%= link_to 'Wines', wines_path %> >> Editing <%= @wine.name %></h2>
+<%= render 'form' %>

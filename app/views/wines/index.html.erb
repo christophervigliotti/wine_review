@@ -1,10 +1,5 @@
-<!--
-The index page
-must have a link or button to create new wines
--->
-<h1><%= image_tag "bottle.small.png", :align=> "left" %> Quit Yer' Whinin'</h1>
+<%= render '/title' %>
 <h2>Wines</h2>
-
 <ul>
   <% @wines.each do |wine| %>
       <li>
@@ -12,3 +7,4 @@ must have a link or button to create new wines
       </li>
   <% end %>
 </ul>
+<%= link_to 'New Wine', new_wine_path %>
