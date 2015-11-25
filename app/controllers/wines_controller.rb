@@ -12,7 +12,7 @@ class WinesController < ApplicationController
 
   def new
     @wine = Wine.new
-    @varietals = Wine.varietals
+    @varietals = Wine::VARIETALS
   end
 
   def create
@@ -25,7 +25,7 @@ class WinesController < ApplicationController
   end
 
   def edit
-    @varietals = Wine.varietals
+    @varietals = Wine::VARIETALS
   end
 
   def update
