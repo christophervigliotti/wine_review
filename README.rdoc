@@ -1,96 +1,57 @@
-First Do Some Reading
+class 04 homework
 
-  Agile Web Development with Rails 4
+    The Wine model object
 
-    Read chapters 1, 2, 3
+      must have a constant VARIETALS [merlot, chianti, etc...]
 
-        read ch 1
-        read ch 2
-        tinkering...
-            installing ruby, homebrew, rvm, rails on osx
-            bombed out my vm while attempting to install RubyMine
-            RubyMine osx install is good to go
-            can I run wine_review app in OSX?
-                yes
-        read ch 2
-        read ch 3
+      must validate
+        name is present
+        year is present and an integer
+        country is present
+        varietal is valid from list (hint: inclusion in VARIETALS)
 
-    status: done
+      Also, be sure to re-check that your seed data validates properly!!
 
-Review Bookstore Code
+      You must create at least 6 wines in the seeds file, so that pagination will occur without
 
-    missing some of it...PHOOEY!
-    re-code it, test it, add it, commit it, push it
-    (then sling code for wine_review)
+    The WinesController
 
-    status: done
+      must validate wine objects before saving
 
-Sling Some Code
+      must notify the user after successfully saving a wine object (hint: The Fla
 
-  Requirements To Implement
+    The layout
 
-    You will need to generate a Wine model with the following fields
+        must have a header and footer that shows on all pages
 
-      name: string
-      year: integer
-      winery: string
-      country: string
-      varietal: string
+        must have a sidebar containing common functions, e.g. "All Wines" and "Create Wine"
 
-      in console...
+        must be able to show flash messages on all pages (hint: use a partial)
 
-        bin/rails generate model wine name:string year:integer winery:string country:string varietal:string
+        must be setup to use the Bootstrap CSS classes, e.g. col-xs-3 (Hint: refere to the layout we used in the class labs for the Bookstore app)
 
-      status: done
+    Styling
 
-    Generate a WinesController
+        must require Twitter bootstrap
 
-      It must have index and show actions
-      The actions must retrieve Wine objects from the database
+            Hint: refer back to Lab 6
 
-      first (in terminal)...
-        bin/rails generate controller wine index show
+    The Gemfile
 
-      second add to controller...
-        def index
-          @wine = Wine.all
-        end
-        def show
-          @book = Book.find(params[:id])
-        end
-
-      status: done
+        must contain 'bootstrap-sass', 'autoprefixer-rails', 'kaminari', and 'kaminari-bootstrap'
 
     The index page
 
-      must list all the wines in the database
-      must show the name, winery, and varietal for each wine
-      must have a link to the show page for each wine
+        must paginate when there are more than 5 wines (hint: you will need to edit the Kaminari configuration)
 
-      status: done
+    The new and edit pages
 
-    The show page
+        must show validation errors when attempting to save an invalid wine
 
-      must show all fields from the Wine model
-      must provide a link back to the index page
+        must use a select form element to let the users select the varietal
 
-      status: done
-
-    seeds.rb
-
-      create at least 6 wines in the seeds.rb (so that when we add paging later, you'll have two pages of wines)
-
-        status: done
+            Hint: f.select :varietal, Wine::VARIETALS, { prompt: "Pick one" }
 
     routes.rb
 
-      you should name your routes "wines" and "wine" using the as: option
-
-      status: done
-
-Lastly Tag & Push Yer Code
-
-  git tag class-02
-  git push --tags
-
-  status: not started
+        add a root path that points to the wines index (Hint: http://guides.rubyonrails.org/routing.html#using-root
