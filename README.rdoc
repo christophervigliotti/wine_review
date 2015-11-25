@@ -1,77 +1,132 @@
 class 04 homework
 
-    The Wine model object
+    #The Wine model object
 
-      must have a constant VARIETALS [merlot, chianti, etc...]
+        requirements
 
-      def self.varietals
-        ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio']
-      end
+            #must have a constant VARIETALS [merlot, chianti, etc...]
+            def self.varietals
+                ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio']
+            end
 
-      must validate
+             #must validate
 
-        name is present
-        validates :name, presence: true
+                #name is present
+                validates :name, presence: true
 
-        year is present and an integer
-        validates :year, presence: true, numericality: { only_integer: true }
-        country is present
+                #year is present and an integer
+                validates :year, presence: true, numericality: { only_integer: true }
 
-        validates :country, presence: true, numericality: { only_integer: true }
+                #country is present
+                validates :country, presence: true
 
-        varietal is valid from list (hint: inclusion in VARIETALS)
-        http://guides.rubyonrails.org/active_record_validations.html#inclusion
-        validates :varietal, presence: true, inclusion: { in: ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio'].join (' ')
-        ^^ can I reference the list declared in the model here??
-        validates :varietal, presence: true, inclusion: { in: Wine.varietals }
+                #varietal is valid from list (hint: inclusion in VARIETALS)
+                #http://guides.rubyonrails.org/active_record_validations.html#inclusion
+                #validates :varietal, presence: true, inclusion: { in: ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio'].join (' ')
+                #^^ can I reference the list declared in the model here??
+                validates :varietal, presence: true, inclusion: { in: self.varietals }
 
-      Also, be sure to re-check that your seed data validates properly!!
-      test by rake db:seed?  will check that out
+            #Also, be sure to re-check that your seed data validates properly!!
+            #test by rake db:seed?  will check that out
 
-      You must create at least 6 wines in the seeds file, so that pagination will occur without
+            #You must create at least 6 wines in the seeds file, so that pagination will occur without
+
+        status
+
+            elaboration: done
+            code: done
+            tested: no
 
     The WinesController
 
-        must validate wine objects before saving
-        see bookstore code, controller, create and update methods
+        requirements
 
-        must notify the user after successfully saving a wine object ct (hint: The Flash)
-        see bookstore code, controller, create and update methods (and the flash layout and the list page (that includes the flash layout)
+            must validate wine objects before saving
+            see bookstore code, controller, create and update methods
 
-    HALT! IMPLEMENT ABOVE BEFORE PROCEEDING
+            must notify the user after successfully saving a wine object ct (hint: The Flash)
+            see bookstore code, controller, create and update methods (and the flash layout and the list page (that includes the flash layout)
+
+        status
+
+            elaboration: done
+            code: done
+            tested: no
 
     The layout
 
-        must have a header and footer that shows on all pages
+        requirements
 
-        must have a sidebar containing common functions, e.g. "All Wines" and "Create Wine"
+            must have a header and footer that shows on all pages
+            done
 
-        must be able to show flash messages on all pages (hint: use a partial)
+            must have a sidebar containing common functions, e.g. "All Wines" and "Create Wine"
+            *** resume work here
 
-        must be setup to use the Bootstrap CSS classes, e.g. col-xs-3 (Hint: refere to the layout we used in the class labs for the Bookstore app)
+            must be able to show flash messages on all pages (hint: use a partial)
+
+            must be setup to use the Bootstrap CSS classes, e.g. col-xs-3 (Hint: refere to the layout we used in the class labs for the Bookstore app)
+
+        status
+
+            code: no
+            tested: no
 
     Styling
 
-        must require Twitter bootstrap
+        requirements
 
+            must require Twitter bootstrap
             Hint: refer back to Lab 6
+
+        status
+
+            code: no
+            tested: no
 
     The Gemfile
 
-        must contain 'bootstrap-sass', 'autoprefixer-rails', 'kaminari', and 'kaminari-bootstrap'
+        requirements
+
+            must contain 'bootstrap-sass', 'autoprefixer-rails', 'kaminari', and 'kaminari-bootstrap'
+
+        status
+
+            code: no
+            tested: no
 
     The index page
 
-        must paginate when there are more than 5 wines (hint: you will need to edit the Kaminari configuration)
+        requirements
+
+            must paginate when there are more than 5 wines (hint: you will need to edit the Kaminari configuration)
+
+        status
+
+            code: no
+            tested: no
 
     The new and edit pages
 
-        must show validation errors when attempting to save an invalid wine
+        requirements
 
-        must use a select form element to let the users select the varietal
+            must show validation errors when attempting to save an invalid wine
 
+            must use a select form element to let the users select the varietal
             Hint: f.select :varietal, Wine::VARIETALS, { prompt: "Pick one" }
+
+        status
+
+            code: no
+            tested: no
 
     routes.rb
 
-        add a root path that points to the wines index (Hint: http://guides.rubyonrails.org/routing.html#using-root
+        requirements
+
+            add a root path that points to the wines index (Hint: http://guides.rubyonrails.org/routing.html#using-root
+
+        status
+
+            code: no
+            tested: no

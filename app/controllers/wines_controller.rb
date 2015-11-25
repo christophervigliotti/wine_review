@@ -8,7 +8,6 @@ class WinesController < ApplicationController
   end
 
   def show
-    # replaced by the before_action @wine = Wine.find(params[:id])
   end
 
   def new
@@ -17,22 +16,25 @@ class WinesController < ApplicationController
 
   def create
     @wine = Wine.new(wine_params)
-    @wine.save
-    redirect_to @wine
+    if @wine.save
+      redirect_to @wine, notice: "#{@wine.name} was created!"
+    else
+      render :new
+    end
   end
 
   def edit
-    # replaced by the before_action @wine = Wine.find(params[:id])
   end
 
   def update
-    # replaced by the before_action @wine = Wine.find(params[:id])
-    @wine.update(wine_params)
-    redirect_to @wine
+    if @wine.update(wine_params)
+      redirect_to @wine, notice: "#{@wine.name} was updated!"
+    else
+      render :update
+    end
   end
 
   def destroy
-    # replaced by the before_action @wine = Wine.find(params[:id])
     @wine.destroy
     redirect_to wines_url
   end
