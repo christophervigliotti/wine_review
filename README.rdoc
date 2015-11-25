@@ -140,7 +140,9 @@ Class 4 Homework
 
 Other Tinkering
 
-        Cucumber https://cucumber.io/docs/reference/rails
+        Cucumber 
+                https://cucumber.io/docs/reference/rails
+                https://blog.codecentric.de/en/2013/08/cucumber-setup-basics/
 
 When everything is done and tested and good to go...
 
