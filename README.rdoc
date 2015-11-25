@@ -138,6 +138,10 @@ Class 4 Homework
             code: yes
             tested: yes
 
+Other Tinkering
+
+        Cucumber https://cucumber.io/docs/reference/rails
+
 When everything is done and tested and good to go...
 
     cd ~/Workspace/wine_review
