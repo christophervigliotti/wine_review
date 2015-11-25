@@ -8,6 +8,7 @@ Class 4 Homework
             def self.varietals
                 ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio']
             end
+            ended up replacing this with a CONSTANT.  CAPSLOCK FTW
 
              #must validate
 
@@ -138,14 +139,30 @@ Class 4 Homework
             code: yes
             tested: yes
 
+        When everything is done and tested and good to go...
+
+            cd ~/Workspace/wine_review
+            git tag class-04
+            git push --tags
+
 Other Tinkering
 
-        Cucumber 
+    Testing
+        
+        101
+        http://guides.rubyonrails.org/testing.html
+        blarg!
+                bin/rake test test/models/wine_test.rb
+                /usr/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler/setup (LoadError)
+                	from /usr/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	                from /home/pi/Repos/wine_review/config/boot.rb:3:in `<top (required)>'
+                	from bin/rake:6:in `require_relative'
+                	from bin/rake:6:in `<main>'
+
+
+    Cucumber 
                 https://cucumber.io/docs/reference/rails
                 https://blog.codecentric.de/en/2013/08/cucumber-setup-basics/
 
-When everything is done and tested and good to go...
-
-    cd ~/Workspace/wine_review
-    git tag class-04
-    git push --tags
+                works!
+                rake cucumber
