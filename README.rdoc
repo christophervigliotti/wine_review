@@ -4,21 +4,41 @@ class 04 homework
 
       must have a constant VARIETALS [merlot, chianti, etc...]
 
+      def self.varietals
+        ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio']
+      end
+
       must validate
+
         name is present
+        validates :name, presence: true
+
         year is present and an integer
+        validates :year, presence: true, numericality: { only_integer: true }
         country is present
+
+        validates :country, presence: true, numericality: { only_integer: true }
+
         varietal is valid from list (hint: inclusion in VARIETALS)
+        http://guides.rubyonrails.org/active_record_validations.html#inclusion
+        validates :varietal, presence: true, inclusion: { in: ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio'].join (' ')
+        ^^ can I reference the list declared in the model here??
+        validates :varietal, presence: true, inclusion: { in: Wine.varietals }
 
       Also, be sure to re-check that your seed data validates properly!!
+      test by rake db:seed?  will check that out
 
       You must create at least 6 wines in the seeds file, so that pagination will occur without
 
     The WinesController
 
-      must validate wine objects before saving
+        must validate wine objects before saving
+        see bookstore code, controller, create and update methods
 
-      must notify the user after successfully saving a wine object (hint: The Fla
+        must notify the user after successfully saving a wine object ct (hint: The Flash)
+        see bookstore code, controller, create and update methods (and the flash layout and the list page (that includes the flash layout)
+
+    HALT! IMPLEMENT ABOVE BEFORE PROCEEDING
 
     The layout
 
