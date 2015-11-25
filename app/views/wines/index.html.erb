@@ -1,8 +1,8 @@
 <h2>Wines</h2>
 <p>
-  <%= page_entries_info @wines %>
+  <%= page_entries_info(@wines) %>
 </p>
-<ol start="">
+<ul start="">
   <% @wines.each_with_index do |wine, i| %>
 
       <li style="padding-bottom: 5px;">
@@ -10,5 +10,5 @@
         <br />For more info, <%= link_to('smell the cork', wine) %>.
       </li>
   <% end %>
-</ol>
+</ul>
 <%= paginate @wines %>
