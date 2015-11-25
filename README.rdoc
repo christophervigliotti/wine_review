@@ -114,15 +114,13 @@ class 04 homework
 
             must show validation errors when attempting to save an invalid wine
 
-            *** RESUME HERE
-
             must use a select form element to let the users select the varietal
             Hint: f.select :vaçrietal, Wine::VARIETALS, { prompt: "Pick one" }
 
         status
 
-            code: no
-            tested: no
+            code: yes
+            tested: yes
 
     routes.rb
 

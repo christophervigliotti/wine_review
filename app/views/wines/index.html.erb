@@ -1,8 +1,9 @@
 <h2>Wines</h2>
 <ul>
   <% @wines.each do |wine| %>
-      <li>
-        <strong><%= wine.name %></strong> is a <%= wine.varietal.downcase %> produced by <%= wine.winery %>.  For more info, <%= link_to('smell the cork', wine) %>.
+      <li style="padding-bottom: 5px;">
+        <strong><%= wine.name %></strong>: A <%= wine.varietal %> produced by <%= wine.winery %>.
+        <br />For more info, <%= link_to('smell the cork', wine) %>.
       </li>
   <% end %>
 </ul>

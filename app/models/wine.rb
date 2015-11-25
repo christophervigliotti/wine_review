@@ -1,5 +1,6 @@
 class Wine < ActiveRecord::Base
 
+  # SHOULD I HAVE USED A CONSTANT HERE ala Wine::VARIETALS ??
   def self.varietals
     ['Cabernet','Pinot Noir','Chardonnay','Champagne','Chianti','Pinot Grigio']
   end
