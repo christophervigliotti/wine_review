@@ -7,6 +7,6 @@ class Wine < ActiveRecord::Base
   validates :name, presence: true
   validates :year, presence: true, numericality: { only_integer: true }
   validates :country, presence: true
-  validates :varietal, presence: true, inclusion: { in: self.varietals }
+  validates :varietal, presence: true, inclusion: { in: self.varietals, message: "must be  #{self.varietals.to_sentence(:last_word_connector => ' or ')}" }
 
 end

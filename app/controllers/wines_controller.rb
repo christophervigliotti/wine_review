@@ -30,7 +30,7 @@ class WinesController < ApplicationController
     if @wine.update(wine_params)
       redirect_to @wine, notice: "#{@wine.name} was updated!"
     else
-      render :update
+      render :edit
     end
   end
 

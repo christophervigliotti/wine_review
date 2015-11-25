@@ -33,9 +33,9 @@ class 04 homework
 
         status
 
-            elaboration: done
-            code: done
-            tested: no
+            elaboration: yes
+            code: yes
+            tested: yes
 
     The WinesController
 
@@ -49,9 +49,9 @@ class 04 homework
 
         status
 
-            elaboration: done
-            code: done
-            tested: no
+            elaboration: yes
+            code: yes
+            tested: yes
 
     The layout
 
@@ -71,8 +71,8 @@ class 04 homework
 
         status
 
-            code: no
-            tested: no
+            code: yes
+            tested: yes
 
     Styling
 
@@ -83,8 +83,8 @@ class 04 homework
 
         status
 
-            code: no
-            tested: no
+            code: yes
+            tested: yes
 
     The Gemfile
 
@@ -94,8 +94,8 @@ class 04 homework
 
         status
 
-            code: no
-            tested: no
+            code: yes
+            tested: yes
 
     The index page
 
@@ -105,8 +105,8 @@ class 04 homework
 
         status
 
-            code: no
-            tested: no
+            code: yes
+            tested: yes
 
     The new and edit pages
 
@@ -114,8 +114,10 @@ class 04 homework
 
             must show validation errors when attempting to save an invalid wine
 
+            *** RESUME HERE
+
             must use a select form element to let the users select the varietal
-            Hint: f.select :varietal, Wine::VARIETALS, { prompt: "Pick one" }
+            Hint: f.select :vaçrietal, Wine::VARIETALS, { prompt: "Pick one" }
 
         status
 
@@ -130,5 +132,11 @@ class 04 homework
 
         status
 
-            code: no
-            tested: no
+            code: yes
+            tested: yes
+
+When everything is done and tested and good to go...
+
+    cd ~/Workspace/wine_review
+    git tag class-04
+    git push --tags
