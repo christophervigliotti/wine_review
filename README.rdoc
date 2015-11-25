@@ -61,11 +61,13 @@ class 04 homework
             done
 
             must have a sidebar containing common functions, e.g. "All Wines" and "Create Wine"
-            *** resume work here
+            done
 
             must be able to show flash messages on all pages (hint: use a partial)
+            done
 
             must be setup to use the Bootstrap CSS classes, e.g. col-xs-3 (Hint: refere to the layout we used in the class labs for the Bookstore app)
+
 
         status
 
