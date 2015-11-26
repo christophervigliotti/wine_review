@@ -1,3 +1,8 @@
+Getting Started
+
+    Have to type this command before things will work in Raspbian
+    source ~/.rvm/scripts/rvm
+
 Class 4 Homework
 
     #The Wine model object
@@ -146,20 +151,13 @@ Class 4 Homework
             git push --tags
 
 Other Tinkering
-
-    Testing
-        
+    Testing        
         101
-        http://guides.rubyonrails.org/testing.html
-        blarg!
-                bin/rake test test/models/wine_test.rb
-                /usr/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler/setup (LoadError)
-                	from /usr/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
-	                from /home/pi/Repos/wine_review/config/boot.rb:3:in `<top (required)>'
-                	from bin/rake:6:in `require_relative'
-                	from bin/rake:6:in `<main>'
-
-
+	        http://guides.rubyonrails.org/testing.html
+		borks at 
+			bin/rake test --trace
+		resume at
+			https://www.google.com/search?q=rake+aborted!+NoMethodError%3A+undefined+method+%60assert%27+for&gws_rd=ssl
     Cucumber 
                 https://cucumber.io/docs/reference/rails
                 https://blog.codecentric.de/en/2013/08/cucumber-setup-basics/

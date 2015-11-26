@@ -1,0 +1,10 @@
+#!/bin/bash
+clear
+source ~/.rvm/scripts/rvm
+echo "drop,create,migrate,seed..."
+bin/rake db:drop
+bin/rake db:create
+bin/rake db:migrate
+bin/rake db:seed
+echo "start rails"
+rails s
