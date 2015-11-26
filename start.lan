@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 source ~/.rvm/scripts/rvm
-echo Wijn local machine launcher thang
+echo Wijn local network launcher thang
 echo
 echo "DB tasks: drop,create,migrate,seed..."
 bin/rake db:drop
@@ -9,5 +9,5 @@ bin/rake db:create
 bin/rake db:migrate
 bin/rake db:seed
 echo
-echo "starting rails, local-machine accessible at http://localhost:3000"
-rails s
+echo "starting rails, network accessible at http://[server_ip_addr]:3000"
+rails server -b 0.0.0.0
