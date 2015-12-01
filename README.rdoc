@@ -73,7 +73,7 @@ Class 4 Homework
             done
 
             must be setup to use the Bootstrap CSS classes, e.g. col-xs-3 (Hint: refere to the layout we used in the class labs for the Bookstore app)
-            ** do this
+            done
 
         status
 
