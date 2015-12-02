@@ -3,7 +3,7 @@ Getting Started
     Have to type this command before things will work in Raspbian
     source ~/.rvm/scripts/rvm
 
-Class 4 Homework
+Class 4 Homework - DONE!
 
     #The Wine model object
 
@@ -150,17 +150,69 @@ Class 4 Homework
             git tag class-04
             git push --tags
 
+Class 5 - NOT DONE!
+
+    Create a LogEntry model object
+
+        must have fields
+
+            name: string
+            rating: integer
+            location: string
+            comments: string
+            tasted_on: datetime
+
+            DONE
+
+        must validate presence of all fields
+
+          RATING_RANGE = 1..5
+
+          DONE
+
+        must have a constant for valid ratings
+
+          validates :name, presence: true
+          validates :rating, presence: true, inclusion => RATING_RANGE
+          validates :location, presence: true
+          validates :comments, presence: true
+          validates :tasted_on, presence: true
+
+          DONE
+
+    Create a LogEntriesController
+
+        must list log entries
+        must allow creation of new log entries
+
+        DONE
+
+    The "new" page
+
+        must show validation errors when attempting to save an invalid LogEntry
+        must use radio buttons to select the rating
+        should use date_select to choose the tasted_on date
+        must use ajax to load the new log entry form
+
+    routes.rb
+        nest the log_entry resources route under wine
+
+    (Don't forget to git add, git commit, git push. If the homework isn't on GitHub, then we can't grade it.)
+
 Other Tinkering
+
     Testing        
         101
 	        http://guides.rubyonrails.org/testing.html
-		borks at 
-			bin/rake test --trace
-		resume at
-			https://www.google.com/search?q=rake+aborted!+NoMethodError%3A+undefined+method+%60assert%27+for&gws_rd=ssl
-    Cucumber 
-                https://cucumber.io/docs/reference/rails
-                https://blog.codecentric.de/en/2013/08/cucumber-setup-basics/
 
-                works!
-                rake cucumber
+            borks at
+                bin/rake test --trace
+            resume at
+                https://www.google.com/search?q=rake+aborted!+NoMethodError%3A+undefined+method+%60assert%27+for&gws_rd=ssl
+
+        Cucumber
+            https://cucumber.io/docs/reference/rails
+            https://blog.codecentric.de/en/2013/08/cucumber-setup-basics/
+
+            works!
+            rake cucumber
