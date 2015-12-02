@@ -194,12 +194,20 @@ Class 5 - NOT DONE!
     The "new" page
 
         must show validation errors when attempting to save an invalid LogEntry
+        DONE
+
         must use radio buttons to select the rating
+        DONE
+
         should use date_select to choose the tasted_on date
+        DONE
+
         must use ajax to load the new log entry form
+        DONE
 
     routes.rb
         nest the log_entry resources route under wine
+        DONE
 
     (Don't forget to git add, git commit, git push. If the homework isn't on GitHub, then we can't grade it.)
 

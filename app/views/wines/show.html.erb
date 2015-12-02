@@ -10,10 +10,16 @@
   </header>
 </article>
 
-<%= link_to 'Edit This Wine', edit_wine_path(@wine) %>
-|
-<%= link_to 'View All Wines', wines_path %>
+<p>
+  Read all
+  <%= link_to pluralize(@wine.log_entries.size, 'log entry'),
+              wine_log_entries_path(@wine) %>
+  |
+  <%= link_to 'Edit This Wine', edit_wine_path(@wine) %>
+  |
+  <%= link_to 'View All Wines', wines_path %>
 
-<%= button_to 'Delete This Wine', @wine,
-              method: :delete,
-              data: { confirm: 'Are you sure you want to delete this fancy wine?' } %>
+  <%= button_to 'Delete This Wine', @wine,
+                method: :delete,
+                data: { confirm: 'Are you sure you want to delete this fancy wine?' } %>
+</p>

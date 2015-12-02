@@ -12,4 +12,12 @@ class Wine < ActiveRecord::Base
   validates :country, presence: true
   validates :varietal, presence: true, inclusion: { in: VARIETALS, message: "must be  #{VARIETALS.to_sentence(:last_word_connector => ' or ')}" }
 
+  def average_rating
+    if log_entries.loaded?
+      log_entries.map(&:rating).compact.average
+    else
+      log_entries.average(:rating)
+    end
+  end
+
 end

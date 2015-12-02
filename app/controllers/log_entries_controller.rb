@@ -10,12 +10,12 @@ class LogEntriesController < ApplicationController
   end
 
   def new
-    @review = @wine.log_entries.new
+    @log_entry = @wine.log_entries.new
   end
 
   def create
-    @review = @wine.log_entries.new(log_entry_params)
-    if @review.save
+    @log_entry = @wine.log_entries.new(log_entry_params)
+    if @log_entry.save
       redirect_to wine_log_entries_path(@wine), notice: 'Log entry saved!'
     else
       render :new
@@ -24,7 +24,6 @@ class LogEntriesController < ApplicationController
 
   private
 
-  # TODO: fix this
   def log_entry_params
     params.require(:log_entry).permit(:name, :rating, :location, :comments, :tasted_on)
   end

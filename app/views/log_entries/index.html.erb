@@ -1,5 +1,5 @@
-<header>Log Entries for <%= link_to(@log_entry.title, @log_entry) %></header>
-<ol id="reviews">
+<header>Log Entries for <%= link_to(@wine.name, @wine) %></header>
+<ol id="log_entries">
   <% @log_entries.each do |log_entry| %>
       <li>
 
@@ -15,7 +15,7 @@
 </ol>
 
 <%=
-    link_to 'Write a Log Entry', new_log_entry_path(@wine),
+    link_to 'Write a Log Entry', new_wine_log_entry_path(@wine),
             remote: true,
             data: { 'update-target' => 'review_form_container' },
             class: 'btn btn-primary'
