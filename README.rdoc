@@ -187,6 +187,10 @@ Class 5 - NOT DONE!
 
         DONE
 
+    views
+
+        DONE
+
     The "new" page
 
         must show validation errors when attempting to save an invalid LogEntry
