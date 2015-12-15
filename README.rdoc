@@ -150,7 +150,7 @@ Class 4 Homework - DONE!
             git tag class-04
             git push --tags
 
-Class 5 - NOT DONE!
+Class 5 - DONE
 
     Create a LogEntry model object
 
